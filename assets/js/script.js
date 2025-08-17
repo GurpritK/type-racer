@@ -223,8 +223,8 @@ class TypingTest {
     calculateResults() {
         const inputField = document.querySelector('.form-control');
         const typedText = inputField.value;
-        const endTime = new Date();
-        const timeElapsed = (endTime - this.startTime) / 1000; // seconds
+        const currentTime = new Date();
+        const timeElapsed = (currentTime - this.startTime) / 1000; // seconds
         
         // Calculate final WPM
         const wordsTyped = typedText.trim().split(' ').length;
@@ -248,10 +248,11 @@ class TypingTest {
     }
     
     updateStats(stats) {
-        document.querySelector('.stat-item:nth-child(1) .stat-value').textContent = stats.wpm;
-        document.querySelector('.stat-item:nth-child(2) .stat-value').textContent = `${stats.accuracy}%`;
-        document.querySelector('.stat-item:nth-child(3) .stat-value').textContent = stats.time;
-        document.querySelector('.stat-item:nth-child(4) .stat-value').textContent = stats.characters;
+        // Use specific IDs to target the correct elements
+        document.getElementById('wpm-value').textContent = stats.wpm;
+        document.getElementById('accuracy-value').textContent = `${stats.accuracy}%`;
+        document.getElementById('time-value').textContent = stats.time;
+        document.getElementById('characters-value').textContent = stats.characters;
     }
     
     resetStats() {
@@ -275,8 +276,8 @@ class TypingTest {
             const currentTime = new Date();
             const timeElapsed = (currentTime - this.startTime) / 1000;
             
-            // Update time display
-            const timeElement = document.querySelector('.stat-item:nth-child(3) .stat-value');
+            // Update time display using the correct ID
+            const timeElement = document.getElementById('time-value');
             timeElement.textContent = this.formatTime(timeElapsed);
             
             // Continue timer
