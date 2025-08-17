@@ -139,14 +139,7 @@ class TypingTest {
     retryTest() {
         this.isTestActive = false;
         this.startTime = null;
-        
-        // Generate new text
-        this.generateRandomText();
-        
-        // Reset stats
         this.resetStats();
-        
-        // Update button states
         this.updateButtonStates(false);
         
         // Clear and enable input

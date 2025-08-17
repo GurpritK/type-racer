@@ -10,12 +10,132 @@
 <body>
 
     <!-- Create a nav bar with heading and instructions button-->
-     <div class="container">
+<div class="container">
     <header>
-    <h1>TypeRacer</h1>
-    <button>Instructions</button>
+        <h1>TypeRacer</h1>
+        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+            <i class="fas fa-question-circle"></i> Instructions
+        </button>
     </header>
+</div>
+
+<!-- Instructions Modal -->
+<div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="instructionsModalLabel">
+                    <i class="fas fa-keyboard"></i> How to Play TypeRacer
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="instruction-steps">
+                            <!-- Step 1 -->
+                            <div class="instruction-step mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="step-number">
+                                        <span class="badge bg-primary rounded-circle fs-6">1</span>
+                                    </div>
+                                    <div class="step-content ms-3">
+                                        <h6 class="fw-bold text-primary">Choose Your Difficulty</h6>
+                                        <p class="mb-2">Select your preferred difficulty level from the dropdown menu:</p>
+                                        <ul class="list-unstyled ms-3">
+                                            <li><span class="badge bg-success me-2">Easy</span> Simple words and short sentences</li>
+                                            <li><span class="badge bg-warning me-2">Medium</span> More complex vocabulary and longer sentences</li>
+                                            <li><span class="badge bg-danger me-2">Hard</span> Advanced vocabulary and technical terms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="instruction-step mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="step-number">
+                                        <span class="badge bg-primary rounded-circle fs-6">2</span>
+                                    </div>
+                                    <div class="step-content ms-3">
+                                        <h6 class="fw-bold text-primary">Read the Sample Text</h6>
+                                        <p class="mb-0">A random text sample will appear in the gray box. Take a moment to read through it before you start typing.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="instruction-step mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="step-number">
+                                        <span class="badge bg-primary rounded-circle fs-6">3</span>
+                                    </div>
+                                    <div class="step-content ms-3">
+                                        <h6 class="fw-bold text-primary">Start Typing</h6>
+                                        <p class="mb-2">Click in the text input field and start typing the sample text exactly as shown. The test will automatically begin when you type your first character.</p>
+                                        <div class="alert alert-info py-2">
+                                            <i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Focus on accuracy over speed - mistakes will lower your overall score!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="instruction-step mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="step-number">
+                                        <span class="badge bg-primary rounded-circle fs-6">4</span>
+                                    </div>
+                                    <div class="step-content ms-3">
+                                        <h6 class="fw-bold text-primary">Monitor Your Progress</h6>
+                                        <p class="mb-2">Watch your real-time statistics update as you type:</p>
+                                        <ul class="list-unstyled ms-3">
+                                            <li><i class="fas fa-tachometer-alt text-success"></i> <strong>WPM:</strong> Words Per Minute</li>
+                                            <li><i class="fas fa-bullseye text-info"></i> <strong>Accuracy:</strong> Percentage of correct characters</li>
+                                            <li><i class="fas fa-clock text-warning"></i> <strong>Time:</strong> Elapsed time</li>
+                                            <li><i class="fas fa-chart-line text-primary"></i> <strong>Progress:</strong> Completion percentage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5 -->
+                            <div class="instruction-step mb-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="step-number">
+                                        <span class="badge bg-primary rounded-circle fs-6">5</span>
+                                    </div>
+                                    <div class="step-content ms-3">
+                                        <h6 class="fw-bold text-primary">Finish the Test</h6>
+                                        <p class="mb-2">Complete the test by either:</p>
+                                        <ul class="list-unstyled ms-3">
+                                            <li><i class="fas fa-keyboard text-success"></i> Typing the entire text (automatic completion)</li>
+                                            <li><i class="fas fa-enter text-info"></i> Pressing <kbd>Enter</kbd> to finish early</li>
+                                            <li><i class="fas fa-stop text-danger"></i> Clicking the <strong>Stop</strong> button</li>
+                                        </ul>
+                                        <div class="alert alert-success py-2">
+                                            <i class="fas fa-trophy"></i> <strong>Goal:</strong> Try to achieve high WPM while maintaining 95%+ accuracy!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <div class="text-muted">
+                        <i class="fas fa-redo"></i> Use the <strong>Retry</strong> button to get new text samples
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        <i class="fas fa-play"></i> Start Playing!
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
 
     <!-- Main Content Grid -->
@@ -41,14 +161,25 @@
                         <p class="mb-0">
                         </p>
                     </div>
-                    <input type="text" class="form-control" placeholder="Start typing here...">
+                    <input type="text" class="form-control mb-2" placeholder="Start typing to begin test... Press Enter to finish">
+                    
+                    <!-- Retry Button -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle"></i> 
+                            Test starts automatically when you begin typing. Press <kbd>Enter</kbd> to finish.
+                        </small>
+                        <button class="btn btn-outline-secondary btn-sm" id="retry-btn">
+                            <i class="fas fa-redo"></i> New Text
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Control Buttons -->
                 <div class="control-buttons mb-4">
-                    <button class="btn btn-success me-2">Start</button>
-                    <button class="btn btn-danger me-2">Stop</button>
-                    <button class="btn btn-secondary">Retry</button>
+                    <button class="btn btn-success me-2" id="start-btn">Start</button>
+                    <button class="btn btn-danger me-2" id="stop-btn">Stop</button>
+                    <button class="btn btn-secondary" id="main-retry-btn">Retry</button>
                 </div>
             </div>
 
